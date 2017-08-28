@@ -67,7 +67,6 @@ namespace gui_stunden
 					beginTime = Convert.ToDouble(dataGridView1.Rows[x].Cells[y].Value.ToString());
 					endTime = Convert.ToDouble(dataGridView1.Rows[x+1].Cells[y].Value.ToString());
 					
-					//MessageBox.Show(beginTime.ToString() + " " + endTime.ToString());
 					
 					if(beginTime < endTime && beginTime < 6 && endTime <= 6)
 					{
@@ -104,14 +103,12 @@ namespace gui_stunden
 						dayHours = dayHours + (22 - beginTime);
 						currentNightHours = currentNightHours + 2;
 						uebertragNightHours = uebertragNightHours + endTime;
-						//dayHours = dayHours + ((24 - beginTime) + endTime);
 					}
 					
 					
 					DayAktuellerTag = DayAktuellerTag + dayHours;
 					NightAktuellerTag = NightAktuellerTag + currentNightHours;
 					
-					//MessageBox.Show(DayAktuellerTag + " " + NightAktuellerTag);
 					
 					beginTime = 0;
 					endTime = 0;
@@ -127,7 +124,7 @@ namespace gui_stunden
 					DayAktuellerTag = 0;
 					NightAktuellerTag = 0;
 					
-					//MessageBox.Show("Tagstunden: " + tagstunden[y].ToString() + " Nachstunden: " + nachtstunden[y].ToString());
+				
 					textBox1.Text += tagstunden[y].ToString() + " | ";
 					textBox2.Text += nachtstunden[y].ToString() + " | ";
 			}		
